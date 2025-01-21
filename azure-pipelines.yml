@@ -19,7 +19,7 @@ steps:
     resourceGroupName: 'RG_test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo/blob/main/template.json'
+    csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/template.json'
     deploymentMode: 'Complete'
     deploymentName: 'stgacc1'
 
