@@ -15,4 +15,4 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo.git'
     deploymentMode: 'Incremental'
-    deploymentName: 'storage acc deployment'
+    deploymentName: 'storageacc_deployment'
