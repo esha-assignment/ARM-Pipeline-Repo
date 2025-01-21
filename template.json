@@ -5,7 +5,7 @@
     "resources": [
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2024-11-01",
+            "apiVersion": "2022-09-01",
             "name": "stg123arm",
             "location": "[resourceGroup().location]",
             "tags": {
