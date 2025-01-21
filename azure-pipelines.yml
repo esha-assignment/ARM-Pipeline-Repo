@@ -9,7 +9,7 @@ steps:
 
 - script: |
     echo "Template File:"
-    cat https://github.com/esha-assignment/ARM-Pipeline-Repo/blob/main/template.json
+    cat $(/Users/subhasishsaha/Desktop/ARM Template by esha/ExportedTemplate-Microsoft.Template-20250121112834 3/template.json)
   displayName: "Verify Template and Parameter File Contents"
 
 - task: AzureResourceManagerTemplateDeployment@3
