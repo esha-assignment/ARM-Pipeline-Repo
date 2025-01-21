@@ -7,11 +7,6 @@ pool:
 
 steps:
 
-- script: |
-    echo "Template File:"
-    cat $(/Users/subhasishsaha/Desktop/ARM Template by esha/ExportedTemplate-Microsoft.Template-20250121112834 3/template.json)
-  displayName: "Verify Template and Parameter File Contents"
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
