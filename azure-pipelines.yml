@@ -7,6 +7,8 @@ pool:
 
 steps:
 
+- checkout: self
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
