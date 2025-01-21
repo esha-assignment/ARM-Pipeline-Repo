@@ -1,0 +1,18 @@
+
+trigger:
+- main
+
+pool:
+  default
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Subscription'
+    azureResourceManagerConnection: 'Azure subscription 1(40af5fd9-94c4-430a-9f3c-cf02ddd543ec)'
+    subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo.git'
+    deploymentMode: 'Incremental'
+    deploymentName: 'storage acc deployment'
