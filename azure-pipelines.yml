@@ -13,6 +13,6 @@ steps:
     subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo.git'
+    csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo/blob/main/template.json'
     deploymentMode: 'Incremental'
     deploymentName: 'storageacc_deployment'
