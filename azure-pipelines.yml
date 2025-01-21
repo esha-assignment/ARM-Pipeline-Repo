@@ -20,6 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo/blob/main/template.json'
-    deploymentMode: 'Incremental'
+    deploymentMode: 'Complete'
     deploymentName: 'stgacc1'
 
