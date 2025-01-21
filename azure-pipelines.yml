@@ -8,13 +8,11 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Azure subscription 1(40af5fd9-94c4-430a-9f3c-cf02ddd543ec)'
+    deploymentScope: 'Subscription'
+    azureResourceManagerConnection: 'newServiceConnection'
     subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'RG_test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/esha-assignment/ARM-Pipeline-Repo/blob/main/template.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'stgacc_deployment_arm'
+    deploymentName: 'stgacc_tst'
