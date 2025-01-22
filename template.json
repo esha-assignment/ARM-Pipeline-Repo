@@ -12,7 +12,7 @@
             },
             "sku": {
                 "name": "[parameters('sku')]",
-                "tier": "Standard"
+                
             },
             "kind": "StorageV2"
         }
