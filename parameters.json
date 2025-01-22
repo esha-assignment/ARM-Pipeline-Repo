@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccountName": {
-            "value": "stg123arm"
+            // "value": "stg123arm"
             },
         "sku": {
             "value": "Standard_LRS"
