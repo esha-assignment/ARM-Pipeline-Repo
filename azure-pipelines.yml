@@ -11,6 +11,7 @@ steps:
 
 - task: AzureResourceManagerTemplateDeployment@3
 
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'newServiceConnection'
@@ -20,6 +21,7 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameters.json'
     deploymentMode: 'Complete'
-    deploymentName: 'stgacc1'
+    deploymentName: 'arm_parameter'
 
