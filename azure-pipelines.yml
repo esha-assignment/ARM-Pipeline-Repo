@@ -20,6 +20,9 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/template.json'
     csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameters.json'
+    overrideParameters: |
+      storageAccountName=$(storageAccountName)
+      sku=$(sku)
     deploymentMode: 'Complete'
-    deploymentName: 'arm_parameter'
+    deploymentName: 'stgacc123'
 
