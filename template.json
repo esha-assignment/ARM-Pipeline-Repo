@@ -11,7 +11,7 @@
                 "displayName": "deploystorage"
             },
             "sku": {
-                "name": "[parameters('sku')]",
+                "name": "[parameters('sku')]"
                 
             },
             "kind": "StorageV2"
