@@ -7,7 +7,7 @@
         },
         "storageAccountName":{
             "type": "string",
-            "defaultValue": "stg123arm",
+            "defaultValue": "stg123default",
             "metadata": {
               "description": "Name of the storage account"
             }
