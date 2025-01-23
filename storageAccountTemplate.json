@@ -11,7 +11,21 @@
             "metadata": {
               "description": "Name of the storage account"
             }
+        },
+        "vnetName": {
+                "type": "string"
+        },
+        "addressPrefix": {
+                "type": "string"
+        },
+        "subnetName": {
+                "type": "string",
+                "defaultValue": "testsubnet"
+        },
+        "subnetPrefix": {
+                "type": "string"
         }
+        },
     },
     "resources": [
         {
@@ -27,6 +41,29 @@
                 
             },
             "kind": "StorageV2"
+        }
+    ],
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2022-01-01",
+            "name": "[parameters('vnetName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('addressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[parameters('subnetName')]",
+                        "properties": {
+                            "addressPrefix": "[parameters('subnetPrefix')]"
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
