@@ -15,12 +15,13 @@ parameters:
     default: "false"
 
 stages:
+
 - stage: vnet stage
-  condition: eq(parameters.deployStorageaccount, 'true')
   jobs:
     - job: DeployVnet
+      condition: eq(parameters.deployVnet, 'true')
       steps:
-        - checkout: self
+        - checkout: self 
         - task: AzureResourceManagerTemplateDeployment@3
           inputs:
             deploymentScope: 'Resource Group'
@@ -36,9 +37,9 @@ stages:
             deploymentName: 'vnet123'
 
 - stage: SA stage
-  condition: eq(parameters.deployStorageaccount, true)
   jobs:
     - job: DeployStorageAccount
+      condition: eq(parameters.deployStorageaccount, true)
       steps:
         - checkout: self
         - task: AzureResourceManagerTemplateDeployment@3
