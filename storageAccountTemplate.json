@@ -6,11 +6,7 @@
             "type": "string"
         },
         "storageAccountName":{
-            "type": "string",
-            "defaultValue": "stg123default",
-            "metadata": {
-              "description": "Name of the storage account"
-            }
+            "type": "string"
         },
         "vnetName": {
                 "type": "string"
@@ -19,8 +15,7 @@
                 "type": "string"
         },
         "subnetName": {
-                "type": "string",
-                "defaultValue": "testsubnet"
+                "type": "string"
         },
         "subnetPrefix": {
                 "type": "string"

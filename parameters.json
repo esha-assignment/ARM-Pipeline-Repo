@@ -13,6 +13,12 @@
         },
         "subnetPrefix": {
             "value": "10.0.0.0/24"
+        },
+        "storageAccountName": {
+            "value": "stgtstarm"
+        },
+        "subnetName": {
+            "value": "mysubnetarm"
         }
         
         }
