@@ -16,7 +16,7 @@ parameters:
 
 stages:
 - stage: vnet stage
-  condition: eq(parameters.deployVnet, 'true')
+  condition: eq(parameters.deployStorageaccount, 'true')
   jobs:
     - job: DeployVnet
       steps:
