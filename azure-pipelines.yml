@@ -5,21 +5,52 @@ trigger:
 pool:
   default
 
-steps:
+parameters:
+  - name: deployStorageaccount
+    type: boolean
+    default: "false"
 
-- checkout: self
+  - name: deployVnet
+    type: boolean
+    default: "false"
 
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'newServiceConnection'
-    subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'RG_test'
-    location: 'West Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/storageAccountTemplate.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameters.json'
-    deploymentMode: 'Incremental'
-    deploymentName: 'stgacc123'
+
+jobs:
+  - job: DeployVnet
+    condition: eq(parameters.deployVnet, true)
+    steps:
+      - checkout: self
+      - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: 'newServiceConnection'
+          subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: 'RG_test'
+          location: 'West Europe'
+          templateLocation: 'URL of the file'
+          csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/vnetTemplate.json'
+          csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameters.json'
+          deploymentMode: 'Incremental'
+          deploymentName: 'vnet123'
+
+  - job: DeployStorageAccount
+    condition: eq(parameters.deployStorageaccount, true)
+    steps:
+      - checkout: self
+      - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: 'newServiceConnection'
+          subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: 'RG_test'
+          location: 'West Europe'
+          templateLocation: 'URL of the file'
+          csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/storageAccountTemplate.json'
+          csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameters.json'
+          deploymentMode: 'Incremental'
+          deploymentName: 'vnet123'
+        
+
 

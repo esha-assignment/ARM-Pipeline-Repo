@@ -2,13 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resources" : {
-            "type": "string",
-            "allowedValues": [
-                "vnet",
-                "storageaccount"
-            ]
-        },
+        
         "sku":{
             "type": "string"
         },
@@ -44,29 +38,29 @@
                 
             },
             "kind": "StorageV2",
-            "condition": "[equals(parameters('resources'), 'storageaccount')]"
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks",
-            "apiVersion": "2022-01-01",
-            "name": "[parameters('vnetName')]",
-            "location": "[resourceGroup().location]",
-            "properties": {
-                "addressSpace": {
-                    "addressPrefixes": [
-                        "[parameters('addressPrefix')]"
-                    ]
-                },
-                "subnets": [
-                    {
-                        "name": "[parameters('subnetName')]",
-                        "properties": {
-                            "addressPrefix": "[parameters('subnetPrefix')]"
-                        }
-                    }
-                ],
-            "condition": "[equals(parameters('resources'), 'vnet)]"    
-            }
+           
         }
+        // {
+            // "type": "Microsoft.Network/virtualNetworks",
+            // "apiVersion": "2022-01-01",
+            // "name": "[parameters('vnetName')]",
+            // "location": "[resourceGroup().location]",
+            // "properties": {
+            //     "addressSpace": {
+            //         "addressPrefixes": [
+            //             "[parameters('addressPrefix')]"
+            //         ]
+            //     },
+            //     "subnets": [
+            //         {
+            //             "name": "[parameters('subnetName')]",
+            //             "properties": {
+            //                 "addressPrefix": "[parameters('subnetPrefix')]"
+            //             }
+            //         }
+            //     ],
+   
+            // }
+        // }
     ]
 }

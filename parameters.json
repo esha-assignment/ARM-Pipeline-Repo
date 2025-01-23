@@ -16,12 +16,7 @@
         },
         "storageAccountName": {
             "value": "stgtstarm"
-        },
-        "resources": {
-            "value": "true"
+        }
         }
         
-        }
-
-           
-    }
+ }
