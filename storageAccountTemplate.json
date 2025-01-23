@@ -18,7 +18,7 @@
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-04-01",
             "name": "[parameters('storageAccountName')]",
-            "location": "[resourceGroup().location]",
+            "location": "[parameters('location')]",
             "tags": {
                 "displayName": "deploystorage"
             },
