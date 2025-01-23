@@ -16,7 +16,7 @@ parameters:
 
 stages:
 - stage: vnet stage
-  condition: eq(parameters.deployVnet, true)
+  condition: eq(parameters.deployVnet, 'true')
   jobs:
     - job: DeployVnet
       steps:
