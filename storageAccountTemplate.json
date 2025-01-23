@@ -2,6 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "resources" : {
+            "type": "string",
+            "allowedValues": [
+                "vnet",
+                "storageaccount"
+            ]
+        },
         "sku":{
             "type": "string"
         },
@@ -36,7 +43,8 @@
                 "name": "[parameters('sku')]"
                 
             },
-            "kind": "StorageV2"
+            "kind": "StorageV2",
+            "condition": "[equals(parameters('resources'), 'storageaccount')]"
         },
         {
             "type": "Microsoft.Network/virtualNetworks",
@@ -56,7 +64,8 @@
                             "addressPrefix": "[parameters('subnetPrefix')]"
                         }
                     }
-                ]
+                ],
+            "condition": "[equals(parameters('resources'), 'vnet)]"    
             }
         }
     ]
