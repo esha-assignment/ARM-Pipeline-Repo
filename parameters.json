@@ -4,6 +4,20 @@
     "parameters": {
         "sku": {
             "value": "Standard_LRS"
-            }
+            },
+        "vnetName": {
+            "value": "testvnet"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/16"
+        },
+        "subnetPrefix": {
+            "value": "10.0.0.0/24"
+        },
+        "location" : {
+            "value": "[resourceGroup().location]"
+        }
+        }
+
+           
     }
-}
