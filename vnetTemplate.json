@@ -5,9 +5,11 @@
         "vnetName": {
             "type": "string"
         },
+        "sku": {
+            "type": "string"
+        },
         "addressPrefix": {
             "type": "string"
-            
         },
         "subnetName": {
             "type": "string",
