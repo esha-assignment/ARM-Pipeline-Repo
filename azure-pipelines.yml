@@ -19,7 +19,7 @@ stages:
 - stage: vnet stage
   jobs:
     - job: DeployVnet
-      condition: eq(parameters.deployVnet, 'true')
+      condition: ${{ eq(parameters.deployVnet, true) }}
       steps:
         - checkout: self 
         - task: AzureResourceManagerTemplateDeployment@3
