@@ -13,10 +13,8 @@
         },
         "subnetPrefix": {
             "value": "10.0.0.0/24"
-        },
-        "location" : {
-            "value": "[resourceGroup().location]"
         }
+        
         }
 
            

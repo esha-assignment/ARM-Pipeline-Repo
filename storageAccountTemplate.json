@@ -11,10 +11,6 @@
             "metadata": {
               "description": "Name of the storage account"
             }
-        },
-        "location": {
-            "type": "string",
-            "defaultValue": "West Europe"
         }
     },
     "resources": [
@@ -22,7 +18,7 @@
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-04-01",
             "name": "[parameters('storageAccountName')]",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "deploystorage"
             },

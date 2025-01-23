@@ -15,10 +15,6 @@
         },
         "subnetPrefix": {
             "type": "string"
-        },
-        "location": {
-            "defaultValue": "West Europe"
-        
         }
     },
     "resources": [
@@ -26,7 +22,7 @@
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2022-01-01",
             "name": "[parameters('vnetName')]",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
