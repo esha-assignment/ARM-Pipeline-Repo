@@ -16,7 +16,7 @@ parameters:
 
 stages:
 
-- stage: vnet stage
+- stage: DeployVnet
   jobs:
     - job: DeployVnet
       condition: ${{ eq(parameters.deployVnet, true) }}
@@ -36,7 +36,7 @@ stages:
             deploymentMode: 'Incremental'
             deploymentName: 'vnet123'
 
-- stage: SA stage
+- stage: DeployStorageAccount
   jobs:
     - job: DeployStorageAccount
       condition: ${{ eq(parameters.deployStorageaccount, true) }}
