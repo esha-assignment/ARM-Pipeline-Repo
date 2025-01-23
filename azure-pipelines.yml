@@ -39,7 +39,7 @@ stages:
 - stage: SA stage
   jobs:
     - job: DeployStorageAccount
-      condition: eq(parameters.deployStorageaccount, true)
+      condition: ${{ eq(parameters.deployStorageaccount, true) }}
       steps:
         - checkout: self
         - task: AzureResourceManagerTemplateDeployment@3
