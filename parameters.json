@@ -16,9 +16,6 @@
         },
         "storageAccountName": {
             "value": "stgtstarm"
-        },
-        "subnetName": {
-            "value": "mysubnetarm"
         }
         
         }

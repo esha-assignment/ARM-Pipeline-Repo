@@ -15,7 +15,9 @@
                 "type": "string"
         },
         "subnetName": {
-                "type": "string"
+                "type": "string",
+                "defaultValue": "eshasubnet"
+                
         },
         "subnetPrefix": {
                 "type": "string"
