@@ -40,9 +40,7 @@
                 
             },
             "kind": "StorageV2"
-        }
-    ],
-    "resources": [
+        },
         {
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2022-01-01",
