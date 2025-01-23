@@ -11,6 +11,10 @@
             "metadata": {
               "description": "Name of the storage account"
             }
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "West Europe"
         }
     },
     "resources": [
