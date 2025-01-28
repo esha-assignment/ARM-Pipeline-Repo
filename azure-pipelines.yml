@@ -14,6 +14,9 @@ parameters:
     type: boolean
     default: "false"
 
+  - name: keyvault
+    type: string
+
 stages:
 
 - stage: DeployVnet
@@ -56,5 +59,25 @@ stages:
             deploymentMode: 'Incremental'
             deploymentName: 'vnet123'
         
+
+- stage: keyvault
+  jobs:
+    - job: keyvault
+      steps:
+        - checkout: self
+        - task: AzureResourceManagerTemplateDeployment@3
+          inputs:
+            deploymentScope: 'Resource Group'
+            azureResourceManagerConnection: 'newServiceConnection'
+            subscriptionId: '40af5fd9-94c4-430a-9f3c-cf02ddd543ec'
+            action: 'Create Or Update Resource Group'
+            resourceGroupName: 'RG_test'
+            location: 'West Europe'
+            templateLocation: 'URL of the file'
+            csmFile: 'kvtemplate.json'
+            csmParametersFileLink: 'parameter_kv.json'
+            deploymentMode: 'Incremental'
+            deploymentName: 'vnet123'
+
 
 

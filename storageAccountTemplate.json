@@ -37,7 +37,7 @@
                 "name": "[parameters('sku')]"
                 
             },
-            "kind": "StorageV2",
+            "kind": "StorageV2"
            
         }
         // {
@@ -63,4 +63,6 @@
             // }
         // }
     ]
+
+    
 }
