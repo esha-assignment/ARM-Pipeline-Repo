@@ -15,7 +15,7 @@
         "outputs": {
         "retrievedSecretValue": {
           "type": "string",
-          "value": "[reference(concat('https://', parameters('keyVaultName'), '.vault.azure.net/secrets/', parameters('keyVaultSecretName'))).value]"
+          "value": "[reference(concat('https://', parameters('keyVaultName'), '.vault.azure.net/secrets/', parameters('keyVaultSecretName'), '/latest')).value]"
         }
       }
 }
