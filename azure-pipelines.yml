@@ -79,7 +79,7 @@ stages:
             csmFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/kvtemplate.json'
             csmParametersFileLink: 'https://raw.githubusercontent.com/esha-assignment/ARM-Pipeline-Repo/refs/heads/main/parameter_kv.json'
             deploymentMode: 'Incremental'
-            deploymentName: 'vnet123'
+            deploymentName: 'kv123'
             
             
 
