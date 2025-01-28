@@ -16,6 +16,7 @@ parameters:
 
   - name: keyvault
     type: string
+    default: ''
 
 stages:
 
@@ -63,6 +64,7 @@ stages:
 - stage: keyvault
   jobs:
     - job: keyvault
+      condition: ${{ eq(parameters.deployStorageaccount, "false") && eq(parameters.deployVnet, false)  }}
       steps:
         - checkout: self
         - task: AzureResourceManagerTemplateDeployment@3
