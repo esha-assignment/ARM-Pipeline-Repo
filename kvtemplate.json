@@ -15,7 +15,7 @@
         "outputs": {
         "retrievedSecretValue": {
           "type": "string",
-          "value": "[reference(https://kvarmtest.vault.azure.net/secrets/secretarm/471d2fbd739c44fc89cc96b9d3f879b3),'2019-09-01']"
+          "value": "[reference(concat('Microsoft.KeyVault/vaults/', parameters('keyVaultName'), '/secrets/', parameters('keyVaultSecretName')), '2019-09-01').value]"
         }
         
        
