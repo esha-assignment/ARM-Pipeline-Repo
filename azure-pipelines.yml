@@ -77,9 +77,11 @@ stages:
             location: 'West Europe'
             templateLocation: 'URL of the file'
             csmFile: 'kvtemplate.json'
-            csmParametersFileLink: 'parameter_kv.json'
+            csmParametersFile: 'parameter_kv.json'
             deploymentMode: 'Incremental'
             deploymentName: 'vnet123'
+            
+            
 
 
 
