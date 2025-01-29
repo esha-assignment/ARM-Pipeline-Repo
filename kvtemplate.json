@@ -7,12 +7,14 @@
         },
         "keyVaultSecretName": {
         "type": "string"
-        }
+        },
+        "userAssignedManagedIdentityId": {
+        "type": "string"
         },
      
     "resources": [] ,
 
-        "outputs": {
+    "outputs": {
         "retrievedSecretValue": {
           "type": "string",
           "value": "[reference(concat('Microsoft.KeyVault/vaults/', parameters('keyVaultName'), '/secrets/', parameters('keyVaultSecretName')), '2019-09-01').value]"
@@ -20,4 +22,5 @@
         
        
       }
+}
 }
