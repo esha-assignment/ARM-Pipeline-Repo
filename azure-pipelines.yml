@@ -6,11 +6,21 @@ trigger:
 pool:
   default
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: Plan #name of the stage#
+  jobs: 
+  - job: terraformPlan #name of the job#
+    steps: 
+    - checkout: self
+    - task: TerraformIstaller@1
+      inputs:
+        terraformVersion : 'latest'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    -task: TerraformCLI@2
+     displayName: terraform initialize
+     inputs:
+      command: 'init'
+           
+         
+
+
