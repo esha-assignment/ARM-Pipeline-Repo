@@ -1,0 +1,7 @@
+location = "West Europe"
+resource_group_name = "rg-roamler-2308"
+storage_account_name = "storageroamler2308"
+keyvault = "keyvault-roamler-2308"
+app_service_plan = "appserviceplan-roamler-2308"
+managedidentity = "identity-roamler-2308"
+functionapp = "functionapp-roamler-2308"
