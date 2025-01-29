@@ -20,7 +20,7 @@ stages:
      displayName: terraform initialize
      inputs:
       command: 'init'
-           
+
          
 
 
